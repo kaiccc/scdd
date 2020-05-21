@@ -85,6 +85,8 @@ def player_video(href):
 
 def time_format(v_time):
     times = v_time.split(':')
+    if len(times) == 3:
+        return int(times[0]) * 3600 + int(times[1]) * 60 + int(times[2]) + 10
     return int(times[0]) * 60 + int(times[1]) + 10
 
 
