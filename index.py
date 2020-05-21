@@ -98,7 +98,7 @@ if __name__ == "__main__":
     logging.info("已观看视频: %s", json.dumps(player_over_list))
     logging.info("未观看视频: %s", json.dumps(video_list))
     for video_url in video_list:
-        if video_url.info('javascript') > -1:
+        if video_url.index('javascript') > -1:
             continue
         video_time = player_video(video_url)
         logging.info('视频地址:%s , 视频时长:%s' % (video_url, video_time))
